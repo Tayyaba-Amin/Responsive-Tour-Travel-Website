@@ -1,0 +1,52 @@
+.hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-overlay {
+  background:rgba(0, 0, 0, 0.55); 
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.hero-overlay button {
+  background: #ffb703;
+  color: black;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hero-overlay button:hover {
+  background: #fb8500;
+  color: white;
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+  .hero-overlay {
+    margin: 20px;
+    padding: 25px;
+  }
+}
