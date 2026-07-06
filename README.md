@@ -6,7 +6,7 @@ A responsive **Tour & Travel Website** built with **React, JavaScript, and CSS**
 
 **View the project here:**
 
-https://your-project-link.vercel.app
+https://responsive-tour-travel-website.vercel.app/
 
 ---
 
