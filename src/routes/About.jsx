@@ -1,5 +1,5 @@
 import { Hero } from "../components/Hero";
-import abouthero from "../assets/images/abouthero.avif";
+import abouthero from "../assets/images/aboutHero.avif";
 import { Story } from "../components/Story";
 import { MissionVision } from "../components/MissionVision";
 import { Footer } from "../components/Footer";
