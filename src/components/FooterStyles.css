@@ -1,0 +1,30 @@
+.footer{
+   background-color:rgb(14, 73, 14);
+   padding: 20px 40px;
+   color :white;
+}
+.footer h2{
+   text-align: center;
+   margin-bottom: 14px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.footer>p{
+   margin-bottom: 14px;
+   text-align: center;
+}
+.contact-info{
+   display: flex;
+   justify-content: center;
+   gap:60px;
+   margin-bottom: 20px;
+}
+@media (max-width:768px){
+   .contact-info{
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+   }
+}

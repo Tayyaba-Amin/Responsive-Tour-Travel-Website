@@ -1,47 +1,36 @@
-import "../styles/Navbar.css";
+import "./NavbarStyles.css";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import { FaBars, FaTimes, FaMountain } from "react-icons/fa";
-function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+export const Navbar = () => {
+  const [Isopen, setIsOpen] = useState(false);
   return (
-    <nav className="navbar">
-      <div className="logo">
-        <FaMountain className="logo-icon" />
-        <h2>Explore Pakistan</h2>
+    <nav className="NavbarItems">
+      <h1 className="navbar-logo">Travel Explorer</h1>
+      <div className="menu-icons" onClick={() => setIsOpen(!Isopen)}>
+        <i className={Isopen ? "fa-solid fa-times" : "fa-solid fa-bars"}></i>
       </div>
-      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
-      </div>
-      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+      <ul className={Isopen ? "nav-menu active" : "nav-menu"}>
         <li>
-          <a href="#home" onClick={() => setMenuOpen(false)}>
-            Home
-          </a>
+          <Link to="/" className="nav-link">
+            <i className="fa-solid fa-house"></i> Home
+          </Link>
         </li>
         <li>
-          <a href="#destinations" onClick={() => setMenuOpen(false)}>
-            Destinations
-          </a>
+          <Link to="/about" className="nav-link">
+            <i className="fa-solid fa-circle-info"></i> About
+          </Link>
         </li>
         <li>
-          <a href="#packages" onClick={() => setMenuOpen(false)}>
-            Packages
-          </a>
+          <Link to="/services" className="nav-link">
+            <i className="fa-solid fa-briefcase"></i> Service
+          </Link>
         </li>
         <li>
-          <a href="#testimonials" onClick={() => setMenuOpen(false)}>
-            Testimonials
-          </a>
-        </li>
-
-        <li>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>
-            Contact
-          </a>
+          <Link to="/contact" className="nav-link">
+            <i className="fa-solid fa-envelope"></i> Contact
+          </Link>
         </li>
       </ul>
     </nav>
   );
-}
-
-export default Navbar;
+};

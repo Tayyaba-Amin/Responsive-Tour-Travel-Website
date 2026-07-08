@@ -1,23 +1,11 @@
-import "../styles/Hero.css";
-import heroImage from "../assets/images/hero.avif";
-
-function Hero() {
+import "./HeroStyles.css";
+export const Hero = ({ image, title, description }) => {
   return (
-    <section
-      className="hero"
-      id="home"
-      style={{ backgroundImage: `url(${heroImage})` }}
-    >
-      <div className="hero-overlay">
-        <h1>Explore Pakistan</h1>
-        <p>
-          Discover breathtaking mountains, valleys, and unforgettable
-          adventures.
-        </p>
-        <button>Book Your Adventure</button>
+    <section className="hero" style={{ backgroundImage: `url(${image})` }}>
+      <div className="hero-content">
+        <h1>{title}</h1>
+        <p>{description}</p>
       </div>
     </section>
   );
-}
-
-export default Hero;
+};

@@ -1,42 +1,20 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import SectionTitle from "./components/SectionTitle";
-import DestinationSection from "./components/DestinationSection";
-import destinations from "./data/destinations";
-import PackageSection from "./components/PackageSection";
-import packages from "./data/packages";
-import WhyChooseUs from "./components/WhyChooseUs";
-import TestimonialSection from "./components/TestimonialSection";
-import testimonials from "./data/testimonials";
-import Footer from "./components/Footer";
+import { Navbar } from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./routes/Home";
+import { About } from "./routes/About";
+import { Service } from "./routes/Service";
+import { Contact } from "./routes/Contact"; 
 function App() {
   return (
-    <>
+    <div className="App">
       <Navbar />
-      <Hero />
-
-      <SectionTitle
-        title="Popular Destinations"
-        subtitle="Choose your next adventure"
-      />
-      <DestinationSection destinations={destinations} />
-
-      <SectionTitle
-        title="Tour Packages"
-        subtitle="Affordable travel plans for everyone"
-      />
-      <PackageSection packages={packages} />
-
-      <WhyChooseUs />
-
-      <SectionTitle
-        title="Customer Testimonials"
-        subtitle="What our happy travelers say"
-      />
-      <TestimonialSection testimonials={testimonials} />
-
-      <Footer />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Service />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </div>
   );
 }
 

@@ -1,27 +1,24 @@
-import "../styles/Footer.css";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-
-function Footer() {
+import "./FooterStyles.css";
+export const Footer = () => {
   return (
-    <footer className="footer" id="contact">
-      <h2>Explore Pakistan</h2>
-      <p>
-        Discover the beauty of Pakistan with unforgettable travel experiences.
-      </p>
-      <div className="footer-contact">
+    <div className="footer">
+      <h2>Travel Explorer</h2>
+      <p>Explore the world with comfort and confidence.</p>
+      <div className="contact-info">
         <p>
-          <FaMapMarkerAlt /> Islamabad, Pakistan
+          <i className="fa-solid fa-location-dot"></i>Gujrat, Pakistan
         </p>
         <p>
-          <FaPhoneAlt /> +92 300 1234567
+          <i className="fa-solid fa-envelope"></i> info@travelexplorer.com
         </p>
         <p>
-          <FaEnvelope /> info@explorepakistan.com
+          <i className="fa-solid fa-phone"></i>+92 123 4567890
         </p>
       </div>
-      <p className="copyright">© 2026 Explore Pakistan. All Rights Reserved.</p>
-    </footer>
+      <p>
+        <i className="fa-regular fa-copyright"></i>2026 Travel Explorer. All
+        Rights Reserved.
+      </p>
+    </div>
   );
-}
-
-export default Footer;
+};

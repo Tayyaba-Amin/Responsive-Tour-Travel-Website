@@ -1,0 +1,41 @@
+.story{
+ max-width: 90%;
+ margin:40px auto;
+ padding: 20px 40px;
+ background-color:white;
+}
+.story h2{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: green;
+    font-weight: bold;
+}
+.story-content{
+    display: flex;
+    gap :30px;
+    justify-content: center;
+    align-items: center;
+}
+.story-content img{
+    height: 300px;
+    border-radius: 20px;
+}
+.story-content p{
+    font-size: large;
+    color:rgb(82, 80, 80);
+    margin-bottom: 20px;
+    text-align: center;
+}
+@media (max-width:768px){
+    .story{
+        margin: 20px auto;
+        padding: 10px 20px;
+    }
+    .story-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: hidden;
+    }
+}

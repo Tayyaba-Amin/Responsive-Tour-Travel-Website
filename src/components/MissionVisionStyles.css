@@ -1,0 +1,47 @@
+.mission-vision{
+ max-width: 90%;
+ margin:40px auto;
+ padding: 20px 40px;
+}
+.mission-vision h2{
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: green;
+    font-weight: bold;
+}
+.mission-vision  > p{
+    color:rgb(82, 80, 80);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.mission-vision-card{
+    display: flex;
+    gap:30px;
+}
+.mv-card{
+     background-color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    padding: 20px 10px 20px ;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+.mv-card h3{
+    text-align: center;
+    margin-bottom: 10px;
+    color:green;
+}
+.mv-card  p{
+    text-align: center;
+}
+@media (max-width:768px){
+    .mission-vision{
+        margin: 20px auto;
+        padding: 10px 20px;
+    }
+    .mission-vision-card{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+}
